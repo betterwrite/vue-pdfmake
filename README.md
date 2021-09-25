@@ -42,9 +42,5 @@ app.mount('#app');
 
   // get root pdfMake
   console.log(get());
-
-  // or local inject without usePDF()
-  const pdf = inject(Key)
-  console.log(pdf);
 </script>
 ```
