@@ -39,9 +39,11 @@ const create = (
         bolditalics: 'Times-New-Roman-Italics.ttf',
       },
     };
+
+    return pdf.createPdf(document, {}, fonts);
   }
 
-  return pdf.createPdf(document, {}, fonts);
+  return pdf.createPdf(document);
 };
 
 const get = (): any => {
