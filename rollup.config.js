@@ -4,6 +4,8 @@ import typescript from 'rollup-plugin-typescript2';
 import json from '@rollup/plugin-json';
 import babel from 'rollup-plugin-babel';
 import dts from 'rollup-plugin-dts';
+import { terser } from 'rollup-plugin-terser';
+import pkg from './package.json';
 
 const optionsForPackage = ['']; // different modules, default: optionsForPackage = ['']
 const optionsForCompile = ['esm'];
@@ -15,9 +17,19 @@ const createPlugins = () => {
     json(),
     resolve(),
     commonjs(), // for internal node modules, for preference remove it
+    terser(),
     babel({ exclude: 'node_modules/**' }),
   ];
 };
+
+const banner = [
+  `/*!`,
+  ` * ${pkg.name} - v${pkg.version}`,
+  ` *`,
+  ` * ${pkg.name} is licensed under the MIT License.`,
+  ` * http://www.opensource.org/licenses/mit-license`,
+  ` */`,
+].join('\n');
 
 const createConfig = () => {
   const list = [];
@@ -30,6 +42,7 @@ const createConfig = () => {
         file: `./dist${option}/index.js`,
         format: 'cjs',
         exports: 'named',
+        banner,
       },
       plugins: createPlugins(),
       moduleContext: {
@@ -45,6 +58,7 @@ const createConfig = () => {
           file: `./dist${option}/index.${format}.js`,
           format,
           exports: 'named',
+          banner,
         },
         plugins: createPlugins(),
         moduleContext: {

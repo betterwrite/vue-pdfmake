@@ -4,11 +4,8 @@
 export interface PluginOptions {}
 
 export interface PDFHook {
-  pdfMake: any;
   create: (document: TDocumentDefinitions) => TCreatedPdf;
-  fonts: fonts;
-  tableLayouts: tableLayouts;
-  vfs: vfs;
+  get: () => any;
 }
 
 export interface PDFCreateOptions {

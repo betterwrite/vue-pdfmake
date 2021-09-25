@@ -1,10 +1,7 @@
-import { Plugin, App } from '@vue/runtime-core';
-import { PluginOptions } from './types';
-import { usePDF } from './use';
+import { PDFPlugin } from './plugin';
 
 export { usePDF } from './use';
-export default {
-  install: (app: App, options: PluginOptions = {}) => {
-    app.provide('vue-pdfmake', usePDF().pdfMake);
-  },
-} as Plugin;
+export { setFonts } from './helpers';
+export { Key } from './utils';
+
+export default PDFPlugin;

@@ -1,6 +1,6 @@
 # Vue PDFMake
 
-A [PDFMake](http://pdfmake.org/#/) plugin for Vue 3
+A [PDFMake](http://pdfmake.org/#/) plugin for Vue 3.x
 
 > Don't support Vue 2.x
 
@@ -12,7 +12,7 @@ OR
 
 `npm install vue-pdfmake`
 
-and
+in `main.(js|ts)`
 
 ```js
 import { createApp } from 'vue';
@@ -31,16 +31,20 @@ app.mount('#app');
 ```html
 <script setup>
   import { onMounted, inject } from 'vue';
-  import { usePDF } from 'vue-pdfmake';
+  import { usePDF, Key } from '../dist';
+
+  const { create, get } = usePDF();
 
   onMounted(() => {
-    const { create } = usePDF();
 
     create().download();
   });
 
-  // if you don't want to use the hook, get root pdfMake
-  const pdf = inject('vue-pdfmake');
+  // get root pdfMake
+  console.log(get());
+
+  // or local inject without usePDF()
+  const pdf = inject(Key)
   console.log(pdf);
 </script>
 ```
