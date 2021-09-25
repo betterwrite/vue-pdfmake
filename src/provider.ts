@@ -31,13 +31,7 @@ const create = (
         bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
         italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
         bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf',
-      },
-      TimesNewRoman: {
-        normal: 'Times-New-Roman-Regular.ttf',
-        bold: 'Times-New-Roman-Bold.ttf',
-        italics: 'Times-New-Roman-Italics.ttf',
-        bolditalics: 'Times-New-Roman-Italics.ttf',
-      },
+      }
     };
 
     return pdf.createPdf(document, {}, fonts);
