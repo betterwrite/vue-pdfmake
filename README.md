@@ -32,7 +32,7 @@ app.mount('#app');
 
 ```html
 <script setup>
-  import { onMounted, inject } from 'vue';
+  import { onMounted } from 'vue';
   import { usePDF } from 'vue3-pdfmake';
 
   const { create, get } = usePDF();
