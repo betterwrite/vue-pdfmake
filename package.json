@@ -17,8 +17,8 @@
     "docs": "typedoc"
   },
   "keywords": [
-    "typescript",
-    "rollup"
+    "vue",
+    "pdfmake"
   ],
   "dependencies": {
     "makepdf": "^0.1.1"
