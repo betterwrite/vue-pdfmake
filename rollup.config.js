@@ -3,10 +3,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import json from '@rollup/plugin-json';
 import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import dts from 'rollup-plugin-dts';
 
 const optionsForPackage = ['']; // different modules, default: optionsForPackage = ['']
-const optionsForCompile = ['iife', 'esm', 'amd'];
+const optionsForCompile = ['esm'];
 
 const createPlugins = () => {
   // plugins default list
@@ -27,21 +27,14 @@ const createConfig = () => {
       //cjs
       input: `./src${option}/index.ts`,
       output: {
-        file: `./lib${option}/index.js`,
+        file: `./dist${option}/index.js`,
         format: 'cjs',
         exports: 'named',
       },
       plugins: createPlugins(),
-    });
-
-    list.push({
-      input: `./src${option}/index.ts`,
-      output: {
-        file: `./lib${option}/bundle.min.js`,
-        format: 'cjs',
-        exports: 'named',
+      moduleContext: {
+        './node_modules/pdfmake/build/vfs_fonts.js': 'window',
       },
-      plugins: [...createPlugins(), terser()],
     });
 
     optionsForCompile.forEach((format) => {
@@ -49,22 +42,24 @@ const createConfig = () => {
         // optionsForCompile
         input: `./src${option}/index.ts`,
         output: {
-          file: `./lib${option}/index.${format}.js`,
+          file: `./dist${option}/index.${format}.js`,
           format,
           exports: 'named',
         },
         plugins: createPlugins(),
-      });
-
-      list.push({
-        input: `./src${option}/index.ts`,
-        output: {
-          file: `./lib${option}/bundle.${format}.min.js`,
-          format,
-          exports: 'named',
+        moduleContext: {
+          './node_modules/pdfmake/build/vfs_fonts.js': 'window',
         },
-        plugins: [...createPlugins(), terser()],
       });
+    });
+
+    list.push({
+      input: 'src/index.ts',
+      output: {
+        file: 'dist/index.d.ts',
+        format: 'es',
+      },
+      plugins: [dts()],
     });
   });
 

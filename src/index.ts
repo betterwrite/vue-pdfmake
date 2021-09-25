@@ -1,18 +1,10 @@
 import { Plugin, App } from '@vue/runtime-core';
 import { PluginOptions } from './types';
+import { usePDF } from './use';
 
-const initialize = () => {
-  console.log('test');
-};
-
+export { usePDF } from './use';
 export default {
-  install: (app: App, options: PluginOptions) => {
-    /* declare global component */
-    app.provide;
-    app.mixin({
-      created() {
-        initialize();
-      },
-    });
+  install: (app: App, options: PluginOptions = {}) => {
+    app.provide('vue-pdfmake', usePDF().pdfMake);
   },
 } as Plugin;
