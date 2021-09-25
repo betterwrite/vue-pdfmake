@@ -31,7 +31,7 @@ app.mount('#app');
 ```html
 <script setup>
   import { onMounted, inject } from 'vue';
-  import { usePDF, Key } from 'vue3-pdfmake';
+  import { usePDF } from 'vue3-pdfmake';
 
   const { create, get } = usePDF();
 
