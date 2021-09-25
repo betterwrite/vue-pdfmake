@@ -4,6 +4,8 @@ A [PDFMake](http://pdfmake.org/#/) plugin for Vue 3.x
 
 > Don't support Vue 2.x
 
+> WARNING: This package is in the early stage of development.
+
 ## Install
 
 `yarn add vue3-pdfmake`
