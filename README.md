@@ -1,6 +1,6 @@
 # Vue PDFMake
 
-A [PDFMake](http://pdfmake.org/#/) plugin for Vue 2.x and 3.x
+A [PDFMake](http://pdfmake.org/#/) plugin for 3.x
 
 <img src="https://img.shields.io/npm/v/vue3-pdfmake?label=&style=for-the-badge" />
 
