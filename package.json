@@ -6,6 +6,7 @@
   "description": "A pdfmake plugin for Vue 3",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/betterwrite/vue-pdfmake"

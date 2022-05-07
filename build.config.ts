@@ -17,9 +17,7 @@ export default {
   ],
   rollup: {
     emitCJS: true,
-    resolve: {
-      dedupe: ['pdfmake']
-    }
   },
+  declaration: true,
   externals: ['pdfmake'],
 }

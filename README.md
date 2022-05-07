@@ -41,3 +41,5 @@ app.mount('#app');
   });
 </script>
 ```
+
+> WARNING: Depending on how the instance was initialized, use `const pdf = usePDF().default` instead `const pdf = usePDF()`
