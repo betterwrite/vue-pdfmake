@@ -22,5 +22,4 @@ export default {
     }
   },
   externals: ['pdfmake'],
-  declaration: true,
 }
