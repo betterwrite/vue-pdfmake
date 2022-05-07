@@ -13,6 +13,9 @@
   },
   "scripts": {
     "build": "unbuild",
+    "patch": "generi log patch",
+    "minor": "generi log minor",
+    "major": "generi log major",
     "dev": "yarn build && vite",
     "demo": "yarn build && vite --port 5000 preview"
   },
@@ -39,6 +42,7 @@
     "@types/pdfkit": "^0.12.6",
     "@types/pdfmake": "^0.1.21",
     "@vitejs/plugin-vue": "^2.3.2",
+    "generi": "0.3.0",
     "typescript": "^4.1.3",
     "unbuild": "0.7.4",
     "vite": "2.9.8",
