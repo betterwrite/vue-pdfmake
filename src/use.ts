@@ -1,8 +1,9 @@
-import { getCurrentInstance, inject } from 'vue';
-import { Key } from './utils';
-import { PDFHook } from './types';
-import { getProvider } from './provider';
+import { getCurrentInstance, ComponentInternalInstance } from 'vue-demi';
 
-export const usePDF = (): PDFHook => {
-  return getCurrentInstance() ? (inject(Key) as PDFHook) : getProvider();
-};
+export const usePDF = () => {
+  const internalInstance = getCurrentInstance()
+  const pdf = (internalInstance as ComponentInternalInstance).appContext
+    .config.globalProperties.$pdf
+
+  return pdf as any
+}

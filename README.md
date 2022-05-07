@@ -1,10 +1,6 @@
 # Vue PDFMake
 
-A [PDFMake](http://pdfmake.org/#/) plugin for Vue 3.x
-
-> Don't support Vue 2.x
-
-> WARNING: This package is in the early stage of development.
+A [PDFMake](http://pdfmake.org/#/) plugin for Vue 2.x and 3.x
 
 ## Install
 
@@ -35,14 +31,11 @@ app.mount('#app');
   import { onMounted } from 'vue';
   import { usePDF } from 'vue3-pdfmake';
 
-  const { create, get } = usePDF();
+  const pdf = usePDF();
 
   onMounted(() => {
 
-    create().download();
+    pdf.createPdf({}).download();
   });
-
-  // get root pdfMake
-  console.log(get());
 </script>
 ```

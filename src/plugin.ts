@@ -1,11 +1,12 @@
-import { App, Plugin } from '@vue/runtime-core';
-import { getProvider } from './provider';
-import { PluginOptions } from './types';
-import { Key } from './utils';
+import { App, Plugin } from 'vue-demi';
+import * as pdf from 'pdfmake/build/pdfmake';
+
+interface PluginOptions {
+
+}
 
 export const PDFPlugin: Plugin = {
   install: (app: App, options: PluginOptions = {}) => {
-    app.provide(Key, getProvider(options));
-    app.config.globalProperties.$pdf = getProvider(options);
+    app.config.globalProperties.$pdf = pdf as any;
   },
 };
