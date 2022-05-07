@@ -2,6 +2,11 @@
 
 Changelog was created by [Generi](https://github.com/Novout/generi). Any questions, consult the documentation.
 
+### v1.1.0
+
+* **fix:** temporary removing type because beta features [1e5e885]
+* **chore:** version [b1100d5]
+
 ### v1.0.0
 
 * **chore:** config [6261961]
