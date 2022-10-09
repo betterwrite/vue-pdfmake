@@ -1,6 +1,10 @@
-# Changelog (07/05/2022)
+# Changelog (09/10/2022)
 
 Changelog was created by [Generi](https://github.com/Novout/generi). Any questions, consult the documentation.
+
+### v1.2.1
+
+* **chore:** update pdfmake [d94ce0d]
 
 ### v1.2.0
 
