@@ -1803,10 +1803,10 @@ pathe@^0.2.0:
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.2.0.tgz#30fd7bbe0a0d91f0e60bae621f5d19e9e225c339"
   integrity sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==
 
-pdfmake@0.3.0-beta.2:
-  version "0.3.0-beta.2"
-  resolved "https://registry.yarnpkg.com/pdfmake/-/pdfmake-0.3.0-beta.2.tgz#85573da9a7258a488fc18d49549e01c6993bfe0c"
-  integrity sha512-uNgivW5gXkEuP7pzYYPat08FZDObyg2vHqNfFmCMrM7YKpugOjoKBcZd377K/y2PtCMjkOEPoDDLRCtUkGnPdA==
+pdfmake@0.3.0-beta.3:
+  version "0.3.0-beta.3"
+  resolved "https://registry.yarnpkg.com/pdfmake/-/pdfmake-0.3.0-beta.3.tgz#dd1e941b4b2057b07210b575bc6ee30f697a1849"
+  integrity sha512-sDztkn6az36JH8BeO2ZaBoKTwfiJwNK60+xxi/7mjhVQa8FjnOlE3CaXiHRhctb7oYwPm7cAPwLwQJnO1hssDA==
   dependencies:
     "@foliojs-fork/linebreak" "^1.1.1"
     "@foliojs-fork/pdfkit" "^0.13.0"
