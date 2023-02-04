@@ -16,12 +16,12 @@ in `main.(js|ts)`
 
 ```js
 import { createApp } from 'vue';
-import pdfMake from 'vue3-pdfmake';
+import { PDFPlugin } from 'vue3-pdfmake';
 import App from './App.vue';
 
 const app = createApp(App);
 //...
-app.use(pdfMake);
+app.use(PDFPlugin);
 //...
 app.mount('#app');
 ```
@@ -41,5 +41,3 @@ app.mount('#app');
   });
 </script>
 ```
-
-> WARNING: Depending on how the instance was initialized, use `const pdf = usePDF().default` instead `const pdf = usePDF()`

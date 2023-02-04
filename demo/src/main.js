@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import PDF from 'vue3-pdfmake'
+import { PDFPlugin } from 'vue3-pdfmake'
 
-createApp(App).use(PDF).mount('#app')
+createApp(App).use(PDFPlugin).mount('#app')
