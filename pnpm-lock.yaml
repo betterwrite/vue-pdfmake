@@ -18,9 +18,6 @@ devDependencies:
   '@types/node':
     specifier: ^14.18.36
     version: 14.18.36
-  '@types/pdfmake':
-    specifier: 0.2.2
-    version: 0.2.2
   '@vitejs/plugin-vue':
     specifier: ^2.3.4
     version: 2.3.4(vite@4.1.1)(vue@3.2.47)
@@ -562,19 +559,6 @@ packages:
 
   /@types/parse5@6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
-    dev: true
-
-  /@types/pdfkit@0.12.9:
-    resolution: {integrity: sha512-z0y4rQky+nvno3nzyNUeZbrx2YvwP0GEfnpk8o3zG7jL4FYCZk9Vn11DzM+HC4RPzaJDOg9kiLzl3lng4FDcLA==}
-    dependencies:
-      '@types/node': 14.18.36
-    dev: true
-
-  /@types/pdfmake@0.2.2:
-    resolution: {integrity: sha512-CBtkugrgklpXsZ9Wj/+cw+zYoeDnJxVev62ahwpdPCz/O405Wxr+iq76JgUiZc/QAo3P2lWbI2nYA5GrrSL8VQ==}
-    dependencies:
-      '@types/node': 14.18.36
-      '@types/pdfkit': 0.12.9
     dev: true
 
   /@types/tinycolor2@1.4.3:
