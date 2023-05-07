@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "target": "es5",
+    "target": "ESNext",
     "module": "esnext",
     "lib": ["es5", "es6", "dom"],
     "sourceMap": true,

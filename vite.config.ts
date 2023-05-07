@@ -14,7 +14,7 @@ export default defineConfig({
     alias: [
       {
         find: 'vue3-pdfmake',
-        replacement: resolve(__dirname, './dist/index.mjs'),
+        replacement: resolve(__dirname, './dist/index.js'),
       },
     ],
   },

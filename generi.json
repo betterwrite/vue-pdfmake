@@ -1,8 +1,11 @@
 {
+  "repository": "https://github.com/betterwrite/vue-pdfmake",
   "silent": false,
   "commits": "conventional-commits",
   "tag": true,
   "version": true,
   "push": true,
-  "publish": false
+  "publish": false,
+  "exclude": [" typo"],
+  "prerelease": "beta"
 }
