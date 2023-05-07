@@ -28,16 +28,28 @@ app.mount('#app');
 
 ## Example
 
-```html
+```vue
 <script setup>
-  import { onMounted } from 'vue';
-  import { usePDF } from 'vue3-pdfmake';
+import { usePDF } from 'vue3-pdfmake';
 
-  const pdf = usePDF();
+const pdfmake = usePDF({
+  autoInstallVFS: true
+})
 
-  onMounted(() => {
-
-    pdf.createPdf({}).download();
-  });
+const onGenPDF = () => {
+  pdfmake.createPdf({
+    content: [
+      'Hello World From PDFMake!',
+    ]
+  }).download();
+}
 </script>
+
+<template>
+  <button @click="onGenPDF">Click here for download demo pdf</button>
+</template>
 ```
+
+### Documentation
+
+**Check [PDFMake Documentation](https://pdfmake.github.io/docs/0.3/getting-started/client-side/methods/) for more explanations!**
