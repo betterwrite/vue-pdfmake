@@ -5,6 +5,6 @@ interface PluginOptions {}
 
 export const PDFPlugin: Plugin = {
   install: (app: App, options: PluginOptions = {}) => {
-    app.config.globalProperties.$pdf = PDF as typeof PDF;
+    app.config.globalProperties.$pdf = PDF as any;
   },
 };
