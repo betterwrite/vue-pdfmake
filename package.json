@@ -25,16 +25,16 @@
     "patch": "generi log patch",
     "minor": "generi log minor",
     "major": "generi log major",
-    "dev": "yarn build && vite",
-    "demo": "yarn build && vite build && vite --port 5000 preview",
-    "prepublish": "yarn build"
+    "dev": "pnpm build && vite",
+    "demo": "pnpm build && vite build && vite --port 5000 preview",
+    "prepublish": "pnpm build"
   },
   "keywords": [
     "vue",
     "pdfmake"
   ],
   "dependencies": {
-    "pdfmake": "0.3.0-beta.5",
+    "pdfmake": "0.3.0-beta.18",
     "vue-demi": "latest"
   },
   "peerDependencies": {
